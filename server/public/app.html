@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<html>
+
+<head>
+    <title> Vulnerable HTML Page </title>
+</head>
+
+<body>
+    <h1>Welcome to my vulnerable page</h1>
+    <script>
+        window.onbeforeunload = function () {
+            return " Do you want to leave fictitious.site?";
+        }
+    </script>
+    <script>
+        if (location.hash.slice(1)) {
+            document.getElementById("a1").style.cssText = "color: " + location.hash.slice(1);
+        }
+    </script>
+    <iframe src="https://www.google.com/" width="500" height="500"></iframe>
+    <button><a id="a1">Click me</a></button>
+    <a href='/api/v1/users/logout'>click to logout</a>
+</body>
+
+</html>

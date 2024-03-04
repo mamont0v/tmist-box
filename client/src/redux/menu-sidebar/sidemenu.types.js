@@ -1,0 +1,2 @@
+export const SIDEBAR_MENU_TOGGLE = 'SIDEBAR_MENU_TOGGLE';
+export const CLEAN_MENU = 'CLEAN_MENU';

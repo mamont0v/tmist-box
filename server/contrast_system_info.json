@@ -1,0 +1,96 @@
+{
+  "ReportDate": "2024-02-15T11:21:28.566Z",
+  "MachineName": "azalia",
+  "Contrast": {
+    "Url": "https://ce.contrastsecurity.com/Contrast",
+    "Proxy": {
+      "enable": false,
+      "url": null
+    },
+    "Server": {
+      "Name": "azalia"
+    },
+    "Agent": {
+      "Name": "@contrast/agent",
+      "Version": "5.0.8"
+    }
+  },
+  "Node": {
+    "Version": "v20.8.0"
+  },
+  "OperatingSystem": {
+    "Architecture": "x64",
+    "Name": "Windows_NT",
+    "Version": "10.0.22631",
+    "KernelVersion": "Windows 11 Pro",
+    "CPU": {
+      "Type": "13th Gen Intel(R) Core(TM) i5-13600KF",
+      "Count": 20
+    }
+  },
+  "Host": {
+    "Docker": {
+      "isDocker": false,
+      "containerID": null
+    },
+    "PM2": {
+      "used": false
+    },
+    "Memory": {
+      "Total": "34211 MB",
+      "Free": "14427 MB",
+      "Used": "19783 MB"
+    }
+  },
+  "Application": {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "SwordFish Security Testing Platform Box",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "contrast": "node -r @contrast/agent server.js",
+      "start": "node server.js",
+      "dev": "nodemon server.js"
+    },
+    "keywords": [
+      "blackbox",
+      "jwt",
+      "sessions"
+    ],
+    "author": "Valentin Mamontov",
+    "license": "Apache 2.0",
+    "dependencies": {
+      "@contrast/agent": "^5.0.8",
+      "argon2": "^0.30.3",
+      "bcryptjs": "^2.4.3",
+      "colors": "^1.4.0",
+      "compression": "^1.7.4",
+      "cookie-parser": "^1.4.6",
+      "cors": "^2.8.5",
+      "crypto": "^1.0.1",
+      "debug": "^4.3.4",
+      "dotenv": "^16.0.3",
+      "express": "^4.18.2",
+      "express-async-handler": "^1.2.0",
+      "express-rate-limit": "^7.1.5",
+      "express-session": "^1.17.3",
+      "helmet": "^7.0.0",
+      "html-pdf": "^3.0.1",
+      "http": "^0.0.1-security",
+      "http-errors": "^2.0.0",
+      "jsonwebtoken": "^9.0.0",
+      "mongoose": "^7.2.2",
+      "morgan": "^1.10.0",
+      "path": "^0.12.7",
+      "randombytes": "^2.1.0",
+      "uuid": "^9.0.0",
+      "winston": "^3.9.0"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.22",
+      "pm2": "^5.3.0"
+    }
+  }
+}

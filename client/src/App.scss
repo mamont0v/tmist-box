@@ -1,0 +1,68 @@
+/*
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px' 
+*/
+body {
+  /* background: var(--color-2); */
+}
+
+:root {
+    --background-color: #061325;
+    --background-color2: #323236;
+    --borderColor: #404046;
+    --color-1:#232326;
+    --color-2:#3b3b41;
+    --color-text:#a2a5b9;
+    --color-text2:#d4d4d4;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+button {
+  cursor: pointer;
+}
+
+.default-layout {
+  font-family: Roboto, sans-serif;
+  background-color: var(--color-2);
+  // color: rgba(41, 41, 41, 1) !important;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem; //or 1em;
+
+}
+
+// .container {
+//     width: 100%;
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     margin-right: auto;
+//     margin-left: auto;
+
+//     @media (min-width: 1200px) {
+//         max-width: 1140px;
+//     }
+
+//     @media (min-width: 992px) {
+//         max-width: 960px;
+//     }
+
+//     @media (min-width: 768px) {
+//         max-width: 720px;
+//     }
+
+//     @media (min-width: 576px) {
+//         max-width: 540px;
+//     }
+// }
+

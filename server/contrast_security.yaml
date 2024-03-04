@@ -1,0 +1,10 @@
+api: 
+  url: https://ce.contrastsecurity.com/Contrast
+  api_key: t6pmTzGR8OnpNaQa9fvaO6sR2z1O2WG9
+  service_key: WUDXN0AW7TME8XZK
+  user_name: agent_eb6427f3-d942-452a-9a6f-b79dad467923@IvansOrg
+agent: 
+  service: 
+    grpc: true
+assess: 
+  enable_lazy_tracking: false

@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: sfs-server-bb
+    container_name: sfs-server-bb
+    command: node server.js
+    volumes:
+      - ./server/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "127.0.0.1:5088:5088"
+    depends_on:
+      - mongo
+    env_file: ./server/.env
+    networks:
+      - app-network
+  
+  mongo:
+    image: mongo:latest
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "127.0.0.1:27017:27017"
+    networks:
+      - app-network
+  
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: sfs-client-bb
+    container_name: sfs-client-bb
+    command: npm run start
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "127.0.0.1:3000:3000"
+    networks:
+      - app-network
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    data-volume:
+    node_modules:
+    web-root:
+      driver: local
